@@ -1,23 +1,23 @@
 import psycopg2
 import pandas as pd
 
-# Database connection
-conn = psycopg2.connect(
-    host="localhost",
-    database="sales_db",
-    user="postgres",
-    password="123456"   # change this
-)
+def extract():
+    print("Starting extraction...")
 
-# Query
-query = "SELECT * FROM sales;"
+    conn = psycopg2.connect(
+        host="localhost",
+        database="sales_db",
+        user="postgres",
+        password="123456"
+    )
 
-# Load into DataFrame
-df = pd.read_sql(query, conn)
+    query = "SELECT * FROM sales;"
 
-# Print data
-print(df.head())
-print("\nTotal rows:", len(df))
+    df = pd.read_sql(query, conn)
 
-# Close connection
-conn.close()
+    print(df.head())
+    print("\nTotal rows:", len(df))
+
+    conn.close()
+
+    return df
