@@ -1,0 +1,30 @@
+2026-04-12 22:59:43,025 - INFO - Extraction started
+2026-04-12 22:59:43,070 - INFO - Extracted 7 rows
+2026-04-12 22:59:43,080 - INFO - Transformation started
+2026-04-12 22:59:43,080 - INFO - Transformation completed
+2026-04-12 22:59:43,083 - INFO - Loading to BigQuery started
+2026-04-12 22:59:50,852 - INFO - Data loaded to staging
+2026-04-12 22:59:50,853 - INFO - Merge started
+2026-04-12 23:11:24,691 - INFO - Extraction started
+2026-04-12 23:11:24,770 - INFO - Extracted 7 rows
+2026-04-12 23:11:24,786 - INFO - Transformation started
+2026-04-12 23:11:24,788 - INFO - Transformation completed
+2026-04-12 23:11:24,791 - INFO - Loading to BigQuery started
+2026-04-12 23:11:35,711 - INFO - Data loaded to staging
+2026-04-12 23:11:35,720 - INFO - Merge started
+2026-04-12 23:11:44,960 - INFO - Merge completed
+2026-04-12 23:14:35,392 - INFO - Extraction started
+2026-04-12 23:14:35,573 - INFO - Extracted 7 rows
+2026-04-12 23:14:35,588 - INFO - Transformation started
+2026-04-12 23:14:35,589 - INFO - Transformation completed
+2026-04-12 23:14:35,593 - INFO - Loading to BigQuery started
+2026-04-12 23:14:45,925 - INFO - Data loaded to staging
+2026-04-12 23:14:45,925 - INFO - Merge started
+2026-04-12 23:19:18,069 - INFO - ===== PIPELINE STARTED =====
+2026-04-12 23:19:19,532 - INFO - Loading to BigQuery started
+2026-04-12 23:19:30,914 - INFO - Data loaded to staging
+2026-04-12 23:19:30,914 - INFO - Merge started
+2026-04-12 23:21:47,409 - INFO - ===== PIPELINE STARTED =====
+2026-04-12 23:21:48,794 - INFO - Loading to BigQuery started
+2026-04-12 23:21:58,729 - INFO - Data loaded to staging
+2026-04-12 23:21:58,729 - INFO - Merge started

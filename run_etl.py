@@ -1,12 +1,10 @@
+from etl.validate import validate
 from etl.extract import extract
 from etl.transform import transform
-from etl.load import load
+from etl.load import load, run_merge
 
-def main():
-    df = extract()
-    df = transform(df)
-    load(df)
-    print(df.head())
-
-if __name__ == "__main__":
-    main()
+df = extract()
+df = validate(df)
+df = transform(df)
+load(df)
+run_merge()

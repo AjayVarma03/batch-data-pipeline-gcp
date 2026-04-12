@@ -1,5 +1,11 @@
 import psycopg2
 import pandas as pd
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 def extract():
     print("Starting extraction...")

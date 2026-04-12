@@ -11,3 +11,15 @@ def load(df):
     job.result()
 
     print("Data loaded successfully into BigQuery")
+
+def run_merge():
+    print("Running MERGE...")
+
+    client = bigquery.Client()
+
+    query = open("sql/merge.sql").read()
+
+    job = client.query(query)
+    job.result()
+
+    print("Merge completed")
