@@ -1,7 +1,8 @@
 from google.cloud import bigquery
+import logging
 
 def load(df):
-    print("Loading data into BigQuery...")
+    logging.info("Loading to BigQuery started")
 
     client = bigquery.Client()
 
@@ -11,9 +12,11 @@ def load(df):
     job.result()
 
     print("Data loaded successfully into BigQuery")
+    logging.info("Data loaded to staging")
 
 def run_merge():
     print("Running MERGE...")
+    logging.info("Merge started")
 
     client = bigquery.Client()
 
@@ -23,3 +26,5 @@ def run_merge():
     job.result()
 
     print("Merge completed")
+    logging.info("Merge completed")
+

@@ -1,11 +1,5 @@
 import psycopg2
 import pandas as pd
-import logging
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
 
 def extract():
     print("Starting extraction...")
@@ -16,9 +10,7 @@ def extract():
         user="postgres",
         password="123456"
     )
-
-    query = "SELECT * FROM sales;"
-
+    query = "SELECT * FROM sales"
     df = pd.read_sql(query, conn)
 
     print(df.head())

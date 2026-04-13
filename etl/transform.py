@@ -11,7 +11,7 @@ def transform(df):
 
     # 3. Create new column (business logic)
     df["amount_with_tax"] = df["amount"] * 1.18
-
+    
     # 4. Standardize text
     df["product"] = df["product"].str.lower()
     df["city"] = df["city"].str.title()
