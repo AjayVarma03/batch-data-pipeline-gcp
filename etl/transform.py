@@ -10,7 +10,7 @@ def transform(df):
     df = df.drop_duplicates()
 
     # 3. Create new column (business logic)
-    df["amount_with_tax"] = df["amount"] * 1.18
+    #df["amount_with_tax"] = df["amount"] * 1.18
     
     # 4. Standardize text
     df["product"] = df["product"].str.lower()
