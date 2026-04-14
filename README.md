@@ -86,7 +86,6 @@ batch-data-pipeline-gcp/
 | Google Cloud Storage | Source file storage |
 | Pandas | In-memory data transformation |
 | BigQuery Python SDK | Loading data to BQ |
-| Terraform | Infrastructure as Code (optional) |
 
 ---
 
@@ -111,10 +110,10 @@ git clone https://github.com/AjayVarma03/batch-data-pipeline-gcp.git
 cd batch-data-pipeline-gcp
 ```
 
-### 2. Install Python dependencies
+### 2. Install dependencies
 
 ```bash
-pip install pandas google-cloud-bigquery google-cloud-storage apache-airflow
+pip install -r requirements.txt
 ```
 
 ### 3. Configure GCP credentials
@@ -124,17 +123,7 @@ gcloud auth application-default login
 export GOOGLE_CLOUD_PROJECT=your-project-id
 ```
 
-### 4. Run the GCP setup script
-
-```bash
-bash scripts/setup_gcp.sh
-```
-
-This creates the GCS bucket, BigQuery dataset, and required tables.
-
----
-
-## Running the pipeline
+## 4. Running the pipeline
 
 ### Manual run (no Airflow)
 
@@ -143,6 +132,17 @@ python run_etl.py
 ```
 
 This runs extract → validate → transform → load in sequence and writes logs to `logs/pipeline.log`.
+---
+
+🔁 Pipeline Flow :
+Extract data from CSV (GCS)
+Validate data (null checks, data types)
+Transform data (cleaning & enrichment)
+Load into BigQuery staging table
+Run MERGE to update final table
+Log pipeline execution
+
+---
 
 ### With Airflow
 
