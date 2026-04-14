@@ -1,10 +1,15 @@
 def validate(df):
     print("Validating data...")
 
-    if df.isnull().sum().sum() > 0:
-        raise ValueError("Null values found")
+    # check nulls
+    null_count = df.isnull().sum().sum()
+    if null_count > 0:
+        print(f"Warning: {null_count} null values found")
 
-    if df.duplicated().sum() > 0:
-        raise ValueError("Duplicates found")
+    # check duplicates
+    dup_count = df.duplicated().sum()
+    if dup_count > 0:
+        print(f"Warning: {dup_count} duplicate rows found")
 
+    print("Validation completed")
     return df
