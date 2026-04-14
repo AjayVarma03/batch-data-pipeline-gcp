@@ -90,7 +90,7 @@ batch-data-pipeline-gcp/
 
 ---
 
-## Prerequisites
+## Requriements
 
 Before running this project, you need:
 
