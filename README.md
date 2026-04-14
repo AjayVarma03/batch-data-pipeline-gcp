@@ -1,3 +1,9 @@
+![GCP](https://img.shields.io/badge/GCP-Cloud-blue)
+![Airflow](https://img.shields.io/badge/Airflow-Workflow-orange)
+
+
+
+
 # Batch Data Pipeline — GCP
 
 A production-grade batch data pipeline built on Google Cloud Platform. It reads CSV data, validates it, transforms it, and loads it into BigQuery using incremental MERGE logic, with full audit logging and Apache Airflow orchestration.
