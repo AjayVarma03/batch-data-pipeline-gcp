@@ -1,15 +1,19 @@
 def validate(df):
     print("Validating data...")
 
-    # check nulls
-    null_count = df.isnull().sum().sum()
-    if null_count > 0:
-        print(f"Warning: {null_count} null values found")
+    # check if dataframe is empty
+    if df.empty:
+        raise ValueError("DataFrame is empty")
 
-    # check duplicates
-    dup_count = df.duplicated().sum()
-    if dup_count > 0:
-        print(f"Warning: {dup_count} duplicate rows found")
+    print("Columns:", df.columns.tolist())
+
+    # null check (safe for any schema)
+    if df.isnull().sum().sum() > 0:
+        print("Warning: Null values found")
+
+    # duplicate check
+    if df.duplicated().sum() > 0:
+        print("Warning: Duplicate rows found")
 
     print("Validation completed")
     return df
